@@ -12,6 +12,7 @@
 		28DE1D152625D354002423A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DE1D142625D354002423A3 /* Assets.xcassets */; };
 		28DE1D182625D354002423A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DE1D172625D354002423A3 /* Preview Assets.xcassets */; };
 		28DE1D222625D44A002423A3 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 28DE1D212625D44A002423A3 /* YumemiWeather */; };
+		28DE1D252625D62E002423A3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DE1D242625D62E002423A3 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		28DE1D142625D354002423A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28DE1D172625D354002423A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		28DE1D192625D354002423A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28DE1D242625D62E002423A3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				28DE1D102625D351002423A3 /* IosTrainingApp.swift */,
 				28DE1D122625D351002423A3 /* ContentView.swift */,
+				28DE1D242625D62E002423A3 /* HomeView.swift */,
 				28DE1D142625D354002423A3 /* Assets.xcassets */,
 				28DE1D192625D354002423A3 /* Info.plist */,
 				28DE1D162625D354002423A3 /* Preview Content */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DE1D252625D62E002423A3 /* HomeView.swift in Sources */,
 				28DE1D132625D351002423A3 /* ContentView.swift in Sources */,
 				28DE1D112625D351002423A3 /* IosTrainingApp.swift in Sources */,
 			);
