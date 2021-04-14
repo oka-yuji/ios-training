@@ -10,12 +10,13 @@
     
     struct HomeView: View {
         @State var weatherImageName = "sunny"
+        @State var imageColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         var body: some View {
             VStack {
                 VStack{
                     Image(weatherImageName)
                         .resizable()
-                        .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                        .foregroundColor(Color(imageColor))
                         .frame(width: UIScreen.main.bounds.width * 0.5, height:  UIScreen.main.bounds.width * 0.5)
                     HStack {
                         Text("text")
@@ -37,7 +38,18 @@
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.25)
                     
-                    Button(action: { weatherImageName = YumemiWeather.fetchWeather() }) {
+                    Button(action: {
+                            weatherImageName = YumemiWeather.fetchWeather()
+                        switch weatherImageName {
+                        case "sunny":
+                            return imageColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                        case "rainy":
+                            return imageColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+                        default:
+                            return imageColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                        }
+                        
+                    }) {
                         Text("Reload")
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.25)
