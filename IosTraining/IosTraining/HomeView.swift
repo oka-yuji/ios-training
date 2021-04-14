@@ -6,13 +6,16 @@
     //
     
     import SwiftUI
-    
+    import YumemiWeather
     
     struct HomeView: View {
+        @State var weatherImageName = "sunny"
         var body: some View {
             VStack {
                 VStack{
-                    Rectangle()
+                    Image(weatherImageName)
+                        .resizable()
+                        .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
                         .frame(width: UIScreen.main.bounds.width * 0.5, height:  UIScreen.main.bounds.width * 0.5)
                     HStack {
                         Text("text")
@@ -21,7 +24,7 @@
                             .frame(width: UIScreen.main.bounds.width * 0.25)
                         Text("text")
                             .font(.callout)
-                            .foregroundColor(.red)
+                            .foregroundColor(Color.red)
                             .frame(width: UIScreen.main.bounds.width * 0.25)
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.5)
@@ -34,7 +37,7 @@
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.25)
                     
-                    Button(action: {}) {
+                    Button(action: { weatherImageName = YumemiWeather.fetchWeather() }) {
                         Text("Reload")
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.25)
