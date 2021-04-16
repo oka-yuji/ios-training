@@ -11,6 +11,7 @@
     struct HomeView: View {
         @State var weatherImageName = "sunny"
         @State var imageColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        @State var showAlert = false
         var body: some View {
             VStack {
                 VStack{
@@ -39,7 +40,14 @@
                     .frame(width: UIScreen.main.bounds.width * 0.25)
                     
                     Button(action: {
-                            weatherImageName = YumemiWeather.fetchWeather()
+                        do {
+                            weatherImageName = try YumemiWeather.fetchWeather(at: "tokyo")
+                        } catch YumemiWeatherError.unknownError {
+                            showAlert = true
+                        } catch {
+                            weatherImageName = ("error")
+                        }
+                        
                         switch weatherImageName {
                         case "sunny":
                             return imageColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
@@ -53,6 +61,11 @@
                         Text("Reload")
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.25)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("エラー"),
+                              message: Text("\(YumemiWeatherError.unknownError.localizedDescription)"),
+                              dismissButton: .default(Text("OK")))
+                    }
                 }
                 .frame(width: UIScreen.main.bounds.width * 0.5)
             }
