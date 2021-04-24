@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28686C1226323DC000AD5AF6 /* YumemiWeatherFetchingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28686C1126323DC000AD5AF6 /* YumemiWeatherFetchingRepository.swift */; };
 		28DE1D112625D351002423A3 /* IosTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DE1D102625D351002423A3 /* IosTrainingApp.swift */; };
 		28DE1D132625D351002423A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DE1D122625D351002423A3 /* ContentView.swift */; };
 		28DE1D152625D354002423A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DE1D142625D354002423A3 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28686C1126323DC000AD5AF6 /* YumemiWeatherFetchingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumemiWeatherFetchingRepository.swift; sourceTree = "<group>"; };
 		28DE1D0D2625D351002423A3 /* IosTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DE1D102625D351002423A3 /* IosTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosTrainingApp.swift; sourceTree = "<group>"; };
 		28DE1D122625D351002423A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				28DE1D102625D351002423A3 /* IosTrainingApp.swift */,
 				28DE1D122625D351002423A3 /* ContentView.swift */,
 				28DE1D242625D62E002423A3 /* HomeView.swift */,
+				28686C1126323DC000AD5AF6 /* YumemiWeatherFetchingRepository.swift */,
 				28DE1D142625D354002423A3 /* Assets.xcassets */,
 				28DE1D192625D354002423A3 /* Info.plist */,
 				28DE1D162625D354002423A3 /* Preview Content */,
@@ -151,6 +154,7 @@
 			files = (
 				28DE1D252625D62E002423A3 /* HomeView.swift in Sources */,
 				28DE1D132625D351002423A3 /* ContentView.swift in Sources */,
+				28686C1226323DC000AD5AF6 /* YumemiWeatherFetchingRepository.swift in Sources */,
 				28DE1D112625D351002423A3 /* IosTrainingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
